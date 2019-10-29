@@ -51,11 +51,11 @@ export default class RandomPlanet extends Component {
     const hasData = !(loading || error);
     const spinner = loading ? <Spinner /> : null;
     const content = hasData ? <PlanetView planet={planet} /> : null;
-    const erorrMessage = error ? <ErrorIndicator /> : null;
+    const errorMessage = error ? <ErrorIndicator /> : null;
 
     return (
       <div className="random-planet jumbotron rounded">
-        {erorrMessage}
+        {errorMessage}
         {spinner}
         {content}
       </div>
@@ -96,7 +96,7 @@ const ErrorIndicator = () => {
     <div className="error-indicator">
       <span className="boom">BOOM!</span>
       <span>something has gone terribly wrong</span>
-      <span>(but we alredy sent droids to fix it)</span>
+      <span>(but we already sent droids to fix it)</span>
     </div>
   );
 };
